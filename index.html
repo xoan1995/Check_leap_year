@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Leap Year</title>
+</head>
+<body>
+<p><strong>Mô tả</strong></p>
+<p>Trong phần này, chúng ta sẽ phát triển một ứng dụng nhằm kiểm tra xem một năm có phải là năm nhuận hay không. <br>
+
+    Ứng dụng cho phép người dùng nhập vào một năm, sau đó sẽ đưa ra thông báo là năm đó là năm nhuận hay không phải là
+    năm nhuận.
+    <br>
+
+    Năm nhuận là một năm đặc biệt, được cộng thêm một ngày để giữ cho lịch được đồng bộ với lịch thiên văn. <br>
+
+    Cách xác định năm nhuận: Những năm chia hết cho 4 là năm nhuận, ngoại trừ những năm chia hết cho 100 mà không chia
+    hết cho 400.<br>
+
+    Từ đó, có thể rút gọn thành các quy tắc xác định năm nhuận: <br>
+
+    Những năm chia hết cho 4 mà không chia hết cho 100 là năm nhuận <br>
+
+    Những năm chia hết cho 100 mà không chia hết cho 400 thì KHÔNG PHẢI là năm nhuận <br>
+
+    Những năm chia hết đồng thời cho 100 và 400 là năm nhuận</p>
+<button onclick="checkYear()">Click me!</button>
+<script>
+    function checkYear() {
+        let year = parseInt(prompt('Enter a year '));
+     if(year%4==0){
+         if(year%100==0){
+             if(year%400==0){
+                 alert("is a leap Year");
+             }else{
+                 alert("is NOT a leap Year");
+             }
+         }else{
+             alert("is a leap Year")
+         }
+     }else{
+         alert('is Not a leap Year');
+     }
+    }
+
+</script>
+</body>
+</html>
